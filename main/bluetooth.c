@@ -367,7 +367,7 @@ static void esp_spp_cb (esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
 					stream = session.stream;
 
 				session.linestate.dtr = On;
-				session.linestate.dsr = hal.stream.type != StreamType_MPG;
+				session.linestate.dsr = true;
 				session.connection = param->open.handle;
 
 				uint8_t *mac = param->srv_open.rem_bda;
